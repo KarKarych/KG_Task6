@@ -1,0 +1,44 @@
+{
+  "active_curve_index" : 0,
+  "active_curves" : false,
+  "curve_0" : {
+    "color_curve" : {
+      "red" : 234,
+      "green" : 116,
+      "blue" : 42,
+      "alpha" : 255
+    },
+    "type_curve" : 0,
+    "active_lines_frame" : true,
+    "active_points_frame" : true,
+    "scale" : 0,
+    "points" : [ {
+      "x" : 87.0,
+      "y" : 73.5
+    }, {
+      "x" : 131.0,
+      "y" : -21.5
+    }, {
+      "x" : 133.0,
+      "y" : -3.5
+    }, {
+      "x" : 133.0,
+      "y" : -47.5
+    }, {
+      "x" : 134.0,
+      "y" : -35.5
+    }, {
+      "x" : 174.0,
+      "y" : 123.5
+    }, {
+      "x" : 239.0,
+      "y" : 82.5
+    }, {
+      "x" : 336.0,
+      "y" : 26.5
+    }, {
+      "x" : 411.0,
+      "y" : 286.5
+    } ]
+  }
+}

@@ -5,6 +5,7 @@ import org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunction;
 import ru.computerGraphics.model.*;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -317,14 +318,22 @@ public class DrawerController {
 
     pointDoubles.sort(Comparator.comparingDouble(p -> p.x));
 
-    double[] x = new double[pointDoubles.size()];
-    double[] y = new double[pointDoubles.size()];
+    ArrayList<Double> xTemp = new ArrayList<>();
+    ArrayList<Double> yTemp = new ArrayList<>();
 
-    for (int i = 0; i < pointDoubles.size(); i++) {
-      PointDouble pointDouble = pointDoubles.get(i);
+    for (PointDouble pointDouble : pointDoubles) {
+      if (!xTemp.contains(pointDouble.x) && !xTemp.contains(pointDouble.y)) {
+        xTemp.add(pointDouble.x);
+        yTemp.add(pointDouble.y);
+      }
+    }
 
-      x[i] = pointDouble.x;
-      y[i] = pointDouble.y;
+    double[] x = new double[xTemp.size()];
+    double[] y = new double[yTemp.size()];
+
+    for (int i = 0; i < x.length; i++) {
+      x[i] = xTemp.get(i);
+      y[i] = yTemp.get(i);
     }
 
     SplineInterpolator splineInterpolator = new SplineInterpolator();
