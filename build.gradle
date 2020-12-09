@@ -10,8 +10,8 @@ ext {
   commonsMath3 = "3.6.1"
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'ru.computerGraphics'
+version '1.0'
 
 compileJava.options.encoding = 'UTF-8'
 
@@ -26,12 +26,15 @@ task fatJar(type: Jar) {
             'Main-Class': mainClass
   }
 
-  archiveBaseName = project.name + '-all'
-  from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+  from {
+    configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+
   with jar
 }
 
-launch4j {
+createExe {
   mainClassName = mainClass
 }
 
