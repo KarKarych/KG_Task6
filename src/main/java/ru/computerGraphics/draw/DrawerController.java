@@ -24,29 +24,31 @@ public class DrawerController {
 
   public void drawCurves(boolean activity) {
     for (int i = 0; i < curvesList.size(); i++) {
-      switch (curvesList.get(i).getName()) {
+      CurveData curveData = curvesList.get(i);
+
+      switch (curveData.getName()) {
         case CUBIC_SPLINE -> {
-          if (curvesList.get(i).getCurve().getPointDoubles().size() > 3)
-            drawCubicSplineBook(curvesList.get(i).getCurve(), activity || i == curveIndex, curvesList.get(i).getColor());
+          if (curveData.getCurve().getPointDoubles().size() > 3)
+            drawCubicSplineBook(curveData.getCurve(), activity || i == curveIndex, curveData.getColor());
         }
         case BEZIER_CURVE -> {
-          if (curvesList.get(i).getCurve().getPointDoubles().size() > 2)
-            drawBezierCurve(curvesList.get(i).getCurve(), activity || i == curveIndex, curvesList.get(i).getColor());
+          if (curveData.getCurve().getPointDoubles().size() > 2)
+            drawBezierCurve(curveData.getCurve(), activity || i == curveIndex, curveData.getColor());
         }
         case BEZIER_CURVE_2 -> {
-          if (curvesList.get(i).getCurve().getPointDoubles().size() > 2)
-            drawBezierCurveBook(curvesList.get(i).getCurve(), activity || i == curveIndex, curvesList.get(i).getColor());
+          if (curveData.getCurve().getPointDoubles().size() > 2)
+            drawBezierCurveBook(curveData.getCurve(), activity || i == curveIndex, curveData.getColor());
         }
         case B_SPLINE -> {
-          if (curvesList.get(i).getCurve().getPointDoubles().size() > 3)
-            drawBSpline(curvesList.get(i).getCurve(), activity || i == curveIndex, curvesList.get(i).getColor());
+          if (curveData.getCurve().getPointDoubles().size() > 3)
+            drawBSpline(curveData.getCurve(), activity || i == curveIndex, curveData.getColor());
         }
         case BETA_SPLINE -> {
-          beta1 = ((CurveBetaData) curvesList.get(i)).getBeta1();
-          beta2 = ((CurveBetaData) curvesList.get(i)).getBeta2();
+          beta1 = ((CurveBetaData) curveData).getBeta1();
+          beta2 = ((CurveBetaData) curveData).getBeta2();
 
-          if (curvesList.get(i).getCurve().getPointDoubles().size() > 3)
-            drawBetaSpline(curvesList.get(i).getCurve(), activity || i == curveIndex, curvesList.get(i).getColor());
+          if (curveData.getCurve().getPointDoubles().size() > 3)
+            drawBetaSpline(curveData.getCurve(), activity || i == curveIndex, curveData.getColor());
         }
       }
     }
