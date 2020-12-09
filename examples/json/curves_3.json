@@ -1,0 +1,106 @@
+{
+  "active_curve_index" : 2,
+  "active_curves" : false,
+  "curve_0" : {
+    "color_curve" : {
+      "red" : 234,
+      "green" : 116,
+      "blue" : 42,
+      "alpha" : 255
+    },
+    "type_curve" : 1,
+    "active_lines_frame" : true,
+    "active_points_frame" : true,
+    "scale" : 0,
+    "points" : [ {
+      "x" : 182.0,
+      "y" : 212.5
+    }, {
+      "x" : 570.0,
+      "y" : 74.5
+    }, {
+      "x" : 558.0,
+      "y" : -73.5
+    }, {
+      "x" : 355.0,
+      "y" : -55.5
+    }, {
+      "x" : 150.0,
+      "y" : 54.5
+    }, {
+      "x" : -3.0,
+      "y" : -17.5
+    }, {
+      "x" : 136.0,
+      "y" : -111.5
+    }, {
+      "x" : 339.0,
+      "y" : -125.5
+    } ]
+  },
+  "curve_1" : {
+    "color_curve" : {
+      "red" : 234,
+      "green" : 116,
+      "blue" : 42,
+      "alpha" : 255
+    },
+    "type_curve" : 1,
+    "active_lines_frame" : true,
+    "active_points_frame" : true,
+    "scale" : 0,
+    "points" : [ {
+      "x" : -316.0,
+      "y" : 190.5
+    }, {
+      "x" : -254.0,
+      "y" : 15.5
+    }, {
+      "x" : -336.0,
+      "y" : -53.5
+    }, {
+      "x" : -496.0,
+      "y" : 0.5
+    }, {
+      "x" : -491.0,
+      "y" : 158.5
+    }, {
+      "x" : -62.0,
+      "y" : 206.5
+    }, {
+      "x" : -93.0,
+      "y" : 16.5
+    }, {
+      "x" : -164.0,
+      "y" : -73.5
+    } ]
+  },
+  "curve_2" : {
+    "color_curve" : {
+      "red" : 234,
+      "green" : 116,
+      "blue" : 42,
+      "alpha" : 255
+    },
+    "type_curve" : 1,
+    "active_lines_frame" : true,
+    "active_points_frame" : true,
+    "scale" : 0,
+    "points" : [ {
+      "x" : -370.0,
+      "y" : -195.5
+    }, {
+      "x" : 91.0,
+      "y" : -205.5
+    }, {
+      "x" : -158.0,
+      "y" : -290.5
+    }, {
+      "x" : 14.0,
+      "y" : -123.5
+    }, {
+      "x" : 37.0,
+      "y" : 60.5
+    } ]
+  }
+}
