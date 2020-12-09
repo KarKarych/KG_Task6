@@ -166,7 +166,14 @@ public class CurvesPanel extends JPanel implements RepaintListener {
       currentCurveIndex = 0;
       currentCurve = curve;
       listOfCurves.clear();
-      listOfCurves.add(new CurveData(new Curve(), currentCurve, defaultCurveColor, true, true, 0));
+
+      if (currentCurve.equals(BETA_SPLINE)) {
+        listOfCurves.add(new CurveBetaData(new Curve(), currentCurve, defaultCurveColor,
+                true, true, 0, 1, 0));
+      } else {
+        listOfCurves.add(new CurveData(new Curve(), currentCurve, defaultCurveColor,
+                true, true, 0));
+      }
 
       initializeDefaultValues();
 
