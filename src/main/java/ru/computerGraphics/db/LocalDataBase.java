@@ -13,6 +13,7 @@ public class LocalDataBase {
   public final static int maxCurves = 10;
   public final static Color vertexColor = new Color(127, 122, 122, 140);
   public final static Color defaultCurveColor = new Color(234, 116, 42);
+  public final static Color frameEdgeColor = new Color(7, 7, 7, 45);
   public static List<CurvesList> listOfListsCurves = new ArrayList<>();
   public static List<Integer> activeCurveIndexes = new ArrayList<>();
   public static List<Boolean> activityIndexes = new ArrayList<>();
@@ -20,7 +21,6 @@ public class LocalDataBase {
   public static List<Boolean> tempActivePoints = new ArrayList<>();
   public static boolean drawLinesCurrentFrameStatic;
   public static boolean drawPointsCurrentFramesStatic;
-  public static Color frameEdgeColor = new Color(7, 7, 7, 45);
 
   public static void enableHints(Graphics2D graphics2D) {
     graphics2D.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);

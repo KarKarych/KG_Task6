@@ -339,7 +339,8 @@ public class DrawerController {
     SplineInterpolator splineInterpolator = new SplineInterpolator();
     PolynomialSplineFunction function = splineInterpolator.interpolate(x, y);
 
-    for (int xDraw = (int) Math.ceil(function.getKnots()[0]); xDraw < function.getKnots()[function.getKnots().length - 1] - 1; xDraw++) {
+    for (int xDraw = (int) Math.ceil(function.getKnots()[0]);
+         xDraw < function.getKnots()[function.getKnots().length - 1] - 1; xDraw++) {
       PointDouble p1 = new PointDouble(xDraw, function.value(xDraw));
       PointDouble p2 = new PointDouble(xDraw + 1, function.value(xDraw + 1));
 
